@@ -95,7 +95,7 @@
             <MoveSpeed>-0.1</MoveSpeed>
         </equippedStatOffsets>
         <statBases>
-            <WorkToMake>60000</WorkToMake>
+            <WorkToMake>16000</WorkToMake>
             <MaxHitPoints>540</MaxHitPoints>
             <Mass>10</Mass>
             <Flammability>0.1</Flammability>
@@ -131,7 +131,7 @@
         </apparel>
     </ThingDef>
 
-	<ThingDef ParentName="ArmorMachineableBase">
+    <ThingDef ParentName="ArmorHelmetMakeableBase">
 		<defName>BC_ChinchillaBattleBerret</defName>
 		<label>chinchilla battle berret</label>
 		<description>Chinchilla berret. Smort.</description>
@@ -142,6 +142,9 @@
 			<WorkToMake>8000</WorkToMake>
 			<MaxHitPoints>240</MaxHitPoints>
 			<Mass>0.2</Mass>
+            <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.5</ArmorRating_Heat>
             <StuffEffectMultiplierArmor>0.7</StuffEffectMultiplierArmor>
             <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
             <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
