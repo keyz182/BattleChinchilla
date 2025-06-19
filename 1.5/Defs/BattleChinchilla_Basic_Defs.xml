@@ -120,7 +120,6 @@
                 <li>Torso</li>
                 <li>Legs</li>
                 <li>Neck</li>
-                <li>Head</li>
             </bodyPartGroups>
             <wornGraphicPath>Things/Pawn/Animal/Apparel/Body/BC</wornGraphicPath>
             <layers>
