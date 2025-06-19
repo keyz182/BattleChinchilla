@@ -132,9 +132,9 @@
     </ThingDef>
 
     <ThingDef ParentName="ArmorHelmetMakeableBase">
-		<defName>BC_ChinchillaBattleBerret</defName>
-		<label>chinchilla battle berret</label>
-		<description>Chinchilla berret. Smort.</description>
+		<defName>BC_ChinchillaBattleBeret</defName>
+		<label>chinchilla battle beret</label>
+		<description>Chinchilla beret. Smort.</description>
 		<descriptionHyperlinks>
 			<ThingDef>Chinchilla</ThingDef>
 		</descriptionHyperlinks>
