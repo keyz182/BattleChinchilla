@@ -27,6 +27,12 @@
             <steamWorkshopUrl>steam://url/CommunityFilePage/1541438907</steamWorkshopUrl>
             <downloadUrl>steam://url/CommunityFilePage/1541438907</downloadUrl>
         </li>
+        <li>
+            <packageId>Gerrymon.UVT</packageId>
+            <displayName>Gerrymon's Upscaled Vanilla Textures</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/3276562906</steamWorkshopUrl>
+            <downloadUrl>steam://url/CommunityFilePage/3276562906</downloadUrl>
+        </li>
     </modDependencies>
 
     <loadAfter>
@@ -36,5 +42,7 @@
         <li>Ludeon.RimWorld.Royalty</li>
         <li>Ludeon.RimWorld.Biotech</li>
         <li>Ludeon.RimWorld.Anomaly</li>
+        <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+        <li>Dylan.AnimalGear</li>
     </loadAfter>
 </ModMetaData>
