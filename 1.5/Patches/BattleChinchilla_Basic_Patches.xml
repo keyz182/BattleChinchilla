@@ -1,20 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-    <!-- Consider https://steamcommunity.com/sharedfiles/filedetails/?id=2810681278 to help you out -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/race/trainability</xpath>
+        <value>
+            <trainability>Advanced</trainability>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/race/wildness</xpath>
+        <value>
+            <wildness>0.2</wildness>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/race/petness</xpath>
+        <value>
+            <petness>0.8</petness>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/tools/li[1]/power</xpath>
+        <value>
+            <power>8</power>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/tools/li[2]/power</xpath>
+        <value>
+            <power>8</power>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/tools/li[3]/power</xpath>
+        <value>
+            <power>12</power>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/tools/li[4]/power</xpath>
+        <value>
+            <power>4</power>
+        </value>
+    </Operation>
 
-    <!-- <Operation Class="PatchOperationConditional">
-        <xpath>Defs/HediffDef[defName="SomeDef"]/scenarioCanAdd</xpath>
-        <match Class="PatchOperationReplace">
-            <xpath>Defs/HediffDef[defName="SomeDef"]/scenarioCanAdd</xpath>
-            <value>
-                <scenarioCanAdd>true</scenarioCanAdd>
-            </value>
-        </match>
+    <!-- add comps field to Caravan WorldObjectDef if it doesn't exist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/comps</xpath>
         <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/HediffDef[defName="SomeDef"]</xpath>
+            <xpath>Defs/ThingDef[defName="Chinchilla"]</xpath>
             <value>
-                <scenarioCanAdd>true</scenarioCanAdd>
+                <comps />
             </value>
         </nomatch>
-    </Operation> -->
+    </Operation>
+
+    <!-- add pyromaniac caravan handler comp to Caravan WorldObjectDef -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/comps</xpath>
+        <value>
+            <li Class="AnimalBehaviours.CompProperties_Draftable">
+                <makeNonFleeingToo>true</makeNonFleeingToo>
+            </li>
+        </value>
+    </Operation>
 </Patch>
