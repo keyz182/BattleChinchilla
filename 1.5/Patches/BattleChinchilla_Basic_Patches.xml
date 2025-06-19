@@ -43,7 +43,6 @@
         </value>
     </Operation>
 
-    <!-- add comps field to Caravan WorldObjectDef if it doesn't exist -->
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[defName="Chinchilla"]/comps</xpath>
         <nomatch Class="PatchOperationAdd">
@@ -54,12 +53,29 @@
         </nomatch>
     </Operation>
 
-    <!-- add pyromaniac caravan handler comp to Caravan WorldObjectDef -->
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="Chinchilla"]/comps</xpath>
         <value>
             <li Class="AnimalBehaviours.CompProperties_Draftable">
                 <makeNonFleeingToo>true</makeNonFleeingToo>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/comps</xpath>
+        <value>
+            <li Class="AnimalBehaviours.CompProperties_LastStand">
+                <finalCoolDownMultiplier>6</finalCoolDownMultiplier>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/comps</xpath>
+        <value>
+            <li Class="AnimalBehaviours.CompProperties_StateAfterHealthLoss">
+                <healthPercent>40</healthPercent>
+                <tickInterval>50</tickInterval>
+                <mentalState>PanicFlee</mentalState>
             </li>
         </value>
     </Operation>
