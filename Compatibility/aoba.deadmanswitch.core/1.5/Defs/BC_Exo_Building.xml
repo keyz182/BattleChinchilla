@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>BC_Building_MaintenanceBay</defName>
+    <label>mechachilla Gantry</label>
+    <description>A place for mechachilla storage and maintenance, it has a gantry that allows you to do mechachilla loadout modification but requires at least one connected module storage shelve.</description>
+    <thingClass>BattleChinchilla.EXOSuit.Building_MechachillaBay</thingClass>
+    <graphicData>
+      <texPath>Things/Building/MechachillaBay_Bottom</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <uiIconPath>Things/Building/MechachillaBay</uiIconPath>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <canOverlapZones>false</canOverlapZones>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <WorkToBuild>3600</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+    </costList>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>true</useHitPoints>
+    <fillPercent>0.35</fillPercent>
+    <size>(3,3)</size>
+    <pathCost>100</pathCost>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>10</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <researchPrerequisites>
+      <li>WG_HeavyExoskeleton</li>
+    </researchPrerequisites>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>WalkerGear.ITab_MechGear</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>WG_Frame_PilotSchedule</spawnedConceptLearnOpportunity>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <relatedBuildCommands>
+        <li>MF_Building_ComponentStorage</li>
+        <li>MF_Building_ScaffoldStair</li>
+        <li>MF_Building_Scaffold</li>
+      </relatedBuildCommands>
+    </building>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>MF_Building_ComponentStorage</li>
+          <li>ToolCabinet</li>
+          <li>MF_Building_ScaffoldStair</li>
+          <li>MF_Building_Scaffold</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>true</drawAssignmentOverlay>
+        <compClass>WalkerGear.CompAssignableToPawn_Parking</compClass>
+        <maxAssignedPawnsCount>3</maxAssignedPawnsCount>
+      </li>
+      <li Class="CompProperties_ReportWorkSpeed">
+        <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
+      </li>
+      <li Class="WalkerGear.CompProperties_BuildingExtraRenderer">
+        <extraGraphic>
+          <li>
+            <texPath>Things/Building/MaintenanceBay_Top</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(4,4)</drawSize>
+            <drawOffset>(0,0.005,0)</drawOffset>
+          </li>
+        </extraGraphic>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+  </ThingDef>
+
+</Defs>

@@ -118,8 +118,6 @@
         <apparel>
             <bodyPartGroups>
                 <li>Torso</li>
-                <li>Legs</li>
-                <li>Neck</li>
             </bodyPartGroups>
             <wornGraphicPath>Things/Pawn/Animal/Apparel/Body/BC</wornGraphicPath>
             <layers>
@@ -131,6 +129,7 @@
                 <li>Animal</li>
                 <li>AnimalCUTOUTCOMPLEX</li>
                 <li>Chinchilla</li>
+                <li>DMS_Pilot_Chinchilla</li>
                 <li MayRequire="aoba.deadmanswitch.core">DMS_Pilot</li>
                 <li MayRequire="aoba.deadmanswitch.core">DMS_Tactical</li>
             </tags>

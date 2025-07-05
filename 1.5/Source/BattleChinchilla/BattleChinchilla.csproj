@@ -16,7 +16,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <Optimize>false</Optimize>
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
+    <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -67,6 +67,14 @@
     <CompatibilityFiles Include="../../../Compatibility/**" />
 
     <ExtraFiles Include="../../../LoadFolders.xml;../../../LICENSE;../../../README.md" />
+
+    <CompatibilityFiles Update="..\..\..\Compatibility\aoba.deadmanswitch.core\1.5\Defs\BC_Exo_Apparel.xml">
+      <Link>BattleChinchilla\Compatibility\aoba.deadmanswitch.core\1.5\Defs\BC_Exo_Apparel.xml</Link>
+    </CompatibilityFiles>
+
+    <CompatibilityFiles Update="..\..\..\Compatibility\aoba.deadmanswitch.core\1.5\Defs\BC_Exo_Building.xml">
+      <Link>BattleChinchilla\Compatibility\aoba.deadmanswitch.core\1.5\Defs\BC_Exo_Building</Link>
+    </CompatibilityFiles>
   </ItemGroup>
 
 </Project>

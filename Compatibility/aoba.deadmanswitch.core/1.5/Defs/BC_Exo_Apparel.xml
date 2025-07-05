@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <ThingDef Name="BS_ModuleApparelBase" ParentName="ModuleApparelBase" Abstract="True">
+        <tickerType>Normal</tickerType>
+        <comps>
+            <li Class="CompProperties_Styleable" />
+            <li Class="WalkerGear.CompProperties_SleepCover" />
+        </comps>
+        <modExtensions>
+            <li Class="VFECore.ApparelDrawPosExtension">
+                <isUnifiedApparel>true</isUnifiedApparel>
+                <hideHead>true</hideHead>
+                <showBodyInBedAlways>true</showBodyInBedAlways>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef Name="BS_ModuleApparelCore" ParentName="BS_ModuleApparelBase" Abstract="True">
+        <thingClass>WalkerGear.WalkerGear_Core</thingClass>
+        <equippedStatOffsets>
+            <MeleeDamageFactor>1.25</MeleeDamageFactor>
+            <StaggerDurationFactor>-0.9</StaggerDurationFactor>
+        </equippedStatOffsets>
+        <statBases>
+            <Flammability>0</Flammability>
+        </statBases>
+        <apparel>
+            <tags>
+                <li>DMS_DragoonArmour</li>
+            </tags>
+            <parentTagDef>WGApparelBody</parentTagDef>
+            <useDeflectMetalEffect>true</useDeflectMetalEffect>
+            <renderSkipFlags>
+                <li>Body</li>
+            </renderSkipFlags>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Legs</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Shell</li>
+                <li>WG_WalkerGearLayer_Core</li>
+            </layers>
+        </apparel>
+        <tools>
+            <li>
+                <label>mechanical fist</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>24</power>
+                <armorPenetration>0.8</armorPenetration>
+                <cooldownTime>0.5</cooldownTime>
+            </li>
+            <li>
+                <label>mechanical leg</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>18</power>
+                <armorPenetration>0.5</armorPenetration>
+                <cooldownTime>1</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <ThingDef ParentName="BS_ModuleApparelCore">
+        <defName>BC_Apparel_Mechachilla_Core</defName>
+        <label>MC-18 "Mechachilla" frame module</label>
+        <description>A towering marvel of engineering, the MC-18 "Mechachilla" was custom-designed for the legendary chinchilla supersoldier Adachii. Standing at an imposing height, this exoframe combines overwhelming power with a uniquely compact cockpit scaled for its diminutive pilot. The neural interface systems were specifically calibrated for chinchilla reflexes, making it nearly impossible for other species to pilot effectively.\n\nThe Mechachilla's most distinctive feature is its adaptive control system, which translates its pilot's natural agility and quick movements into devastating combat manoeuvres. The cockpit's environmental controls maintain a perfect temperature and humidity level for its furry operator, while the enhanced sensory suite amplifies a chinchilla's natural capacity for detecting vibrations and movement.\n\nWhile its sheer size and power match any standard military exoframe, the Mechachilla's true advantage lies in its unprecedented fusion of chinchilla dexterity with mechanical might. However, prospective pilots are warned: only those with specialized training and the proper pilot uniform can hope to harness its full potential.</description>
+        <graphicData>
+            <texPath>Things/Mechachilla/Mechachilla_south</texPath>
+        </graphicData>
+        <descriptionHyperlinks>
+            <ThingDef>BC_Module_Mechachilla_Core</ThingDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <Mass>120</Mass>
+            <MoveSpeed>8.5</MoveSpeed>
+            <ArmorRating_Sharp>2</ArmorRating_Sharp>
+            <ArmorRating_Blunt>2</ArmorRating_Blunt>
+            <ArmorRating_Heat>2</ArmorRating_Heat>
+            <Insulation_Cold>100</Insulation_Cold>
+            <Insulation_Heat>100</Insulation_Heat>
+        </statBases>
+        <equippedStatOffsets>
+            <CarryingCapacity>900</CarryingCapacity>
+            <WorkSpeedGlobal>-0.5</WorkSpeedGlobal>
+            <MentalBreakThreshold>-0.5</MentalBreakThreshold>
+            <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+        </equippedStatOffsets>
+        <apparel>
+            <tags>
+                <li>Animal</li>
+                <li>AnimalALLInvisible</li>
+                <li>Chinchilla</li>
+            </tags>
+            <renderNodeProperties>
+                <li>
+                    <nodeClass>WalkerGear.PawnRenderNode_ApparelColor</nodeClass>
+                    <workerClass>PawnRenderNodeWorker</workerClass>
+                    <parentTagDef>WGApparelBody</parentTagDef>
+                    <baseLayer>1</baseLayer>
+                    <drawSize>1.5</drawSize>
+                    <pawnType>Any</pawnType>
+                    <useGraphic>true</useGraphic>
+                    <texPath>Things/Mechachilla/Mechachilla</texPath>
+                    <drawData>
+                        <dataNorth>
+                            <layer>5</layer>
+                        </dataNorth>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
+        </apparel>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <ItemDef>BC_Module_Mechachilla_Core</ItemDef>
+                <slots>
+                    <li>Core</li>
+                </slots>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="WalkerGear.BuildingWreckageExtension">
+                <building>MF_Building_Wreckage</building>
+            </li>
+            <li Class="WalkerGear.ApparelRenderOffsets">
+                <headData>
+                    <dataWest>
+                        <offset>(-0.29,0,0.44)</offset>
+                    </dataWest>
+                    <dataEast>
+                        <offset>(0.29,0,0.44)</offset>
+                    </dataEast>
+                    <dataSouth>
+                        <offset>(0.00,0,0.40)</offset>
+                    </dataSouth>
+                    <dataNorth>
+                        <offset>(0.00,0,0.40)</offset>
+                    </dataNorth>
+                </headData>
+                <headHideFor>
+                    <li>0</li>
+                </headHideFor>
+                <rootData>
+                    <defaultData>
+                        <offset>(0,0,0.35)</offset>
+                    </defaultData>
+                </rootData>
+                <equipmentOffsetData>
+                    <dataWest>
+                        <offset>(-0.25,0,0)</offset>
+                    </dataWest>
+                    <dataEast>
+                        <offset>(0.25,0,0)</offset>
+                    </dataEast>
+                    <dataSouth>
+                        <offset>(-0.25,0,0)</offset>
+                    </dataSouth>
+                    <dataNorth>
+                        <offset>(0.25,0,0)</offset>
+                    </dataNorth>
+                </equipmentOffsetData>
+            </li>
+            <li Class="WalkerGear.ModExtWalkerCore">
+                <minArmorBreakdownThreshold>0.1</minArmorBreakdownThreshold>
+                <RequiredApparelTag>DMS_Pilot_Chinchilla</RequiredApparelTag>
+            </li>
+        </modExtensions>
+    </ThingDef>
+</Defs>

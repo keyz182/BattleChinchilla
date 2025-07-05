@@ -44,5 +44,6 @@
         <li>Ludeon.RimWorld.Anomaly</li>
         <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
         <li>Dylan.AnimalGear</li>
+        <li>aoba.deadmanswitch.core</li>
     </loadAfter>
 </ModMetaData>

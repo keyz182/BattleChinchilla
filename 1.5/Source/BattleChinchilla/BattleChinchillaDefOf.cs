@@ -12,6 +12,7 @@ public static class BattleChinchillaDefOf
 
     public static JobDef BC_ChinchillaTalking;
     public static InteractionDef BC_ChinchillaInteraction;
+    public static ThingDef BC_ChinchillaBattleArmour;
 
     static BattleChinchillaDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(BattleChinchillaDefOf));
 }

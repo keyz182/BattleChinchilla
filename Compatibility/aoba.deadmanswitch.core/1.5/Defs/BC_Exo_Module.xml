@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+    <ThingDef Name="BS_ModuleItemBase" ParentName="ModuleItemBase" Abstract="True">
+        <recipeMaker>
+            <recipeUsers>
+                <li>DMS_TableMachinePrinter</li>
+            </recipeUsers>
+            <effectWorking>Repair</effectWorking>
+            <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+            <workAmount>15000</workAmount>
+            <workSkill>Crafting</workSkill>
+            <soundWorking>Recipe_Machining</soundWorking>
+        </recipeMaker>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <only>(0.7, 0.7, 0.7)</only>
+                </li>
+                <li>
+                    <only>(0.5, 0.5, 0.5)</only>
+                </li>
+                <li>
+                    <only>(0.6, 0.6, 0.6)</only>
+                </li>
+                <li>
+                    <only>(104, 120, 119)</only> <!-- drab dark blue -->
+                </li>
+                <li>
+                    <only>(106, 120, 104)</only> <!-- drab dark green -->
+                </li>
+                <li>
+                    <only>(128, 116, 84)</only> <!-- light brown -->
+                </li>
+                <li>
+                    <only>(107, 94, 64)</only> <!-- mid brown -->
+                </li>
+            </options>
+        </colorGenerator>
+    </ThingDef>
+
+    <ThingDef Name="BS_ModuleItemCore" ParentName="BS_ModuleItemBase" Abstract="True">
+        <thingCategories Inherit="False">
+            <li>DMS_Module_Core</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Module</texPath>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="BS_ModuleItemCore">
+        <defName>BC_Module_Mechachilla_Core</defName>
+        <label>MC-18 "Mechachilla" frame module</label>
+        <description>A towering marvel of engineering, the MC-18 "Mechachilla" was custom-designed for the legendary chinchilla supersoldier Adachii. Standing at an imposing height, this exoframe combines overwhelming power with a uniquely compact cockpit scaled for its diminutive pilot. The neural interface systems were specifically calibrated for chinchilla reflexes, making it nearly impossible for other species to pilot effectively.\n\nThe Mechachilla's most distinctive feature is its adaptive control system, which translates its pilot's natural agility and quick movements into devastating combat manoeuvres. The cockpit's environmental controls maintain a perfect temperature and humidity level for its furry operator, while the enhanced sensory suite amplifies a chinchilla's natural capacity for detecting vibrations and movement.\n\nWhile its sheer size and power match any standard military exoframe, the Mechachilla's true advantage lies in its unprecedented fusion of chinchilla dexterity with mechanical might. However, prospective pilots are warned: only those with specialized training and the proper pilot uniform can hope to harness its full potential.</description>
+        <descriptionHyperlinks>
+            <ThingDef>BC_Apparel_Mechachilla_Core</ThingDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MaxHitPoints>175</MaxHitPoints>
+            <Mass>80</Mass>
+        </statBases>
+        <comps>
+            <li Class="WalkerGear.CompProperties_WalkerComponent">
+                <EquipedThingDef>BC_Apparel_Mechachilla_Core</EquipedThingDef>
+                <slots>
+                    <li>Core</li>
+                </slots>
+            </li>
+        </comps>
+        <recipeMaker Inherit="false" />
+        <costList>
+            <Tungsteel>375</Tungsteel>
+            <Artifuscle>200</Artifuscle>
+            <Steel>125</Steel>
+            <ComponentStamped>12</ComponentStamped>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <Neurocomputer>1</Neurocomputer>
+        </costList>
+        <smeltProducts>
+            <Plasteel>75</Plasteel>
+            <Tungsteel>170</Tungsteel>
+        </smeltProducts>
+        <butcherProducts>
+            <Tungsteel>200</Tungsteel>
+            <Artifuscle>200</Artifuscle>
+            <Plasteel>75</Plasteel>
+            <ChunkSlagSteel>3</ChunkSlagSteel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+            <ComponentStamped>4</ComponentStamped>
+        </butcherProducts>
+    </ThingDef>
+
+</Defs>
