@@ -10,7 +10,7 @@
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xml:space="preserve"
    sodipodi:docname="BattleChinchilla_south.svg"
-   inkscape:export-filename="BC_Chinchilla_southm.png"
+   inkscape:export-filename="BC_Chinchilla_south.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -33,7 +33,7 @@
      showguides="true"
      showgrid="true"
      inkscape:zoom="1.0467523"
-     inkscape:cx="222.11559"
+     inkscape:cx="222.59325"
      inkscape:cy="190.5895"
      inkscape:window-width="2560"
      inkscape:window-height="1377"
@@ -81,7 +81,7 @@
        id="g1"
        inkscape:label="Apparel"
        transform="translate(1.5875,3.7914892)"><path
-         style="fill:url(#linearGradient2);stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
+         style="fill:url(#linearGradient2);stroke:#000000;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
          d="M 30.93053,86.54879 C 50.687674,78.19135 78.40561,73.484391 102.43603,87.439823 112.22509,66.841857 107.14399,45.00809 89.022032,31.150402 64.657554,37.310876 58.027561,32.967011 44.28825,30.49082 22.260113,49.721523 20.977112,73.705847 30.93053,86.54879 Z"
          id="path1"
          sodipodi:nodetypes="ccccc" /><path

@@ -131,6 +131,8 @@
                 <li>Animal</li>
                 <li>AnimalCUTOUTCOMPLEX</li>
                 <li>Chinchilla</li>
+                <li MayRequire="aoba.deadmanswitch.core">DMS_Pilot</li>
+                <li MayRequire="aoba.deadmanswitch.core">DMS_Tactical</li>
             </tags>
         </apparel>
         <colorGenerator Class="ColorGenerator_Options">
