@@ -11,7 +11,7 @@
             <li Class="VFECore.ApparelDrawPosExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
                 <hideHead>true</hideHead>
-                <showBodyInBedAlways>true</showBodyInBedAlways>
+                <showBodyInBedAlways>false</showBodyInBedAlways>
             </li>
         </modExtensions>
     </ThingDef>
@@ -32,9 +32,11 @@
             <parentTagDef>WGApparelBody</parentTagDef>
             <useDeflectMetalEffect>true</useDeflectMetalEffect>
             <renderSkipFlags>
+                <li>Head</li>
                 <li>Body</li>
             </renderSkipFlags>
             <bodyPartGroups>
+                <li>FullHead</li>
                 <li>Torso</li>
                 <li>Legs</li>
                 <li>Neck</li>
@@ -78,7 +80,7 @@
         </descriptionHyperlinks>
         <statBases>
             <Mass>120</Mass>
-            <MoveSpeed>8.5</MoveSpeed>
+            <MoveSpeed>14.5</MoveSpeed>
             <ArmorRating_Sharp>2</ArmorRating_Sharp>
             <ArmorRating_Blunt>2</ArmorRating_Blunt>
             <ArmorRating_Heat>2</ArmorRating_Heat>
@@ -103,10 +105,11 @@
                     <workerClass>PawnRenderNodeWorker</workerClass>
                     <parentTagDef>WGApparelBody</parentTagDef>
                     <baseLayer>1</baseLayer>
-                    <drawSize>1.5</drawSize>
-                    <pawnType>Any</pawnType>
+                    <drawSize>2</drawSize>
+                    <pawnType>NonHumanlikeOnly</pawnType>
                     <useGraphic>true</useGraphic>
                     <texPath>Things/Mechachilla/Mechachilla</texPath>
+                    <shaderTypeDef>CutoutComplex</shaderTypeDef>
                     <drawData>
                         <dataNorth>
                             <layer>5</layer>
@@ -144,6 +147,9 @@
                 </headData>
                 <headHideFor>
                     <li>0</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
                 </headHideFor>
                 <rootData>
                     <defaultData>
@@ -152,16 +158,16 @@
                 </rootData>
                 <equipmentOffsetData>
                     <dataWest>
-                        <offset>(-0.25,0,0)</offset>
+                        <offset>(0.8,0,0.8)</offset>
                     </dataWest>
                     <dataEast>
-                        <offset>(0.25,0,0)</offset>
+                        <offset>(0.8,0,-0.8)</offset>
                     </dataEast>
                     <dataSouth>
-                        <offset>(-0.25,0,0)</offset>
+                        <offset>(0.8,0,0)</offset>
                     </dataSouth>
                     <dataNorth>
-                        <offset>(0.25,0,0)</offset>
+                        <offset>(-0.8,0,0)</offset>
                     </dataNorth>
                 </equipmentOffsetData>
             </li>

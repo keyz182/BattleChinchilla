@@ -8,10 +8,22 @@
             </recipeUsers>
             <effectWorking>Repair</effectWorking>
             <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-            <workAmount>15000</workAmount>
+            <workAmount>45000</workAmount>
             <workSkill>Crafting</workSkill>
             <soundWorking>Recipe_Machining</soundWorking>
+            <researchPrerequisite>DMS_MobileDragoonAdvanced</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
         </recipeMaker>
+        <costList>
+            <Tungsteel>375</Tungsteel>
+            <Artifuscle>200</Artifuscle>
+            <Steel>125</Steel>
+            <ComponentStamped>12</ComponentStamped>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <Neurocomputer>1</Neurocomputer>
+        </costList>
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>

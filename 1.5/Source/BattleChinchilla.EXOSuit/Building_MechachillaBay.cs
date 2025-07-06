@@ -17,6 +17,13 @@ public class Building_MechachillaBay: Building_MaintenanceBay
 
     public static List<Pawn> PawnCache;
 
+    public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
+    {
+        if(selPawn.def != ThingDef.Named("Chinchilla")) yield break;
+        foreach (FloatMenuOption floatMenuOption in base.GetFloatMenuOptions(selPawn))
+            yield return floatMenuOption;
+    }
+
     public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
     {
         Pawn cachedPawn = (Pawn) _cachePawn.Value.GetValue(this);
@@ -38,7 +45,6 @@ public class Building_MechachillaBay: Building_MaintenanceBay
             }
         }
     }
-
 
     public override Pawn Dummy
     {

@@ -38,7 +38,6 @@
         <thingSetMakerTags>
             <li>RewardSpecial</li>
         </thingSetMakerTags>
-
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -54,7 +53,6 @@
                 <muzzleFlashScale>9</muzzleFlashScale>
             </li>
         </verbs>
-
         <comps>
             <li Class="MVCF.Comps.CompProperties_VerbGiver">
                 <verbProps>
@@ -117,12 +115,21 @@
         </costList>
         <apparel>
             <bodyPartGroups>
+                <li>Neck</li>
+                <li>Shoulders</li>
                 <li>Torso</li>
+                <li>Legs</li>
+                <li>Arms</li>
+                <li>Hands</li>
+                <li>Feet</li>
             </bodyPartGroups>
             <wornGraphicPath>Things/Pawn/Animal/Apparel/Body/BC</wornGraphicPath>
             <layers>
                 <li>Middle</li>
             </layers>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
             <useDeflectMetalEffect>true</useDeflectMetalEffect>
             <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
             <tags>

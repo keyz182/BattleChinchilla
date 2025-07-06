@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Chinchilla"]/race/body</xpath>
+        <value>
+            <body>BC_Chinchilla</body>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="BC_ChinchillaBattleArmour"]/description</xpath>
+        <value>
+            <description>It's armour, for chinchillas, in battle.\n\nAlso acts as the required body-suit for chinchillas to use the Mechachilla.</description>
+        </value>
+    </Operation>
+</Patch>

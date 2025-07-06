@@ -75,6 +75,18 @@
     <CompatibilityFiles Update="..\..\..\Compatibility\aoba.deadmanswitch.core\1.5\Defs\BC_Exo_Building.xml">
       <Link>BattleChinchilla\Compatibility\aoba.deadmanswitch.core\1.5\Defs\BC_Exo_Building</Link>
     </CompatibilityFiles>
+
+    <CompatibilityFiles Update="..\..\..\Compatibility\aoba.deadmanswitch.core\1.5\Patches\BC_Body.xml">
+      <Link>BattleChinchilla\Compatibility\aoba.deadmanswitch.core\1.5\Patches\BC_Body.xml</Link>
+    </CompatibilityFiles>
+
+    <CompatibilityFiles Update="..\..\..\Compatibility\aoba.deadmanswitch.core\1.5\Defs\BC_Body.xml">
+      <Link>BattleChinchilla\Compatibility\aoba.deadmanswitch.core\1.5\Defs\BC_Body.xml</Link>
+    </CompatibilityFiles>
+
+    <CompatibilityFiles Update="..\..\..\Compatibility\aoba.deadmanswitch.core\1.5\Defs\BC_Research.xml">
+      <Link>BattleChinchilla\Compatibility\aoba.deadmanswitch.core\1.5\Defs\BC_Research.xml</Link>
+    </CompatibilityFiles>
   </ItemGroup>
 
 </Project>
