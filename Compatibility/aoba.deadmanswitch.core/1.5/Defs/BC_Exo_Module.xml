@@ -100,6 +100,9 @@
             <ComponentIndustrial>3</ComponentIndustrial>
             <ComponentStamped>4</ComponentStamped>
         </butcherProducts>
+        <modExtensions>
+            <li Class="BattleChinchilla.EXOSuit.ExoModExtension" />
+        </modExtensions>
     </ThingDef>
 
 </Defs>

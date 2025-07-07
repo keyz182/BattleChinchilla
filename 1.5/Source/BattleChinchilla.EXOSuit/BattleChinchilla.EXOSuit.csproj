@@ -70,6 +70,12 @@
             <Private>false</Private>
         </ProjectReference>
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="ExoModExtension.cs">
+        <Link>BattleChinchilla\ExoModExtension.cs</Link>
+      </Compile>
+    </ItemGroup>
     <PropertyGroup>
         <StartAction>Program</StartAction>
         <StartProgram>$(SolutionDir)../../../../RimWorldWin64.exe</StartProgram>

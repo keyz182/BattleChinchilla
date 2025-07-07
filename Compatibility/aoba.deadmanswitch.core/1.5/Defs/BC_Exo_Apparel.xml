@@ -175,6 +175,7 @@
                 <minArmorBreakdownThreshold>0.1</minArmorBreakdownThreshold>
                 <RequiredApparelTag>DMS_Pilot_Chinchilla</RequiredApparelTag>
             </li>
+            <li Class="BattleChinchilla.EXOSuit.ExoModExtension" />
         </modExtensions>
     </ThingDef>
 </Defs>
