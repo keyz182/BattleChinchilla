@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <MVCF.ModDef>
+        <defName>BattleChincilla</defName>
+        <label>Battle Chincilla</label>
+        <description>Battle Chincilla</description>
+        <ActivateFeatures>
+            <li>Drawing</li>
+            <li>ApparelVerbs</li>
+            <li>IndependentFire</li>
+            <li>IntegratedToggle</li>
+        </ActivateFeatures>
+    </MVCF.ModDef>
+
+    <ThingDef ParentName="ArmorMachineableBase">
+        <defName>BC_ChinchillaBattleArmour</defName>
+        <label>chinchilla battle armour</label>
+        <description>It's armour, for chinchillas, in battle.</description>
+        <descriptionHyperlinks>
+            <ThingDef>Chinchilla</ThingDef>
+        </descriptionHyperlinks>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+            <researchPrerequisite>FlakArmor</researchPrerequisite>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <generateCommonality>0</generateCommonality>
+        <thingCategories>
+            <li>Animal_Apparel</li>
+        </thingCategories>
+        <thingSetMakerTags>
+            <li>RewardSpecial</li>
+        </thingSetMakerTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <label>Gun</label>
+                <defaultProjectile>Bullet_MiniTurret</defaultProjectile>
+                <warmupTime>0</warmupTime>
+                <range>28.9</range>
+                <hasStandardCommand>true</hasStandardCommand>
+                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>GunShotA</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="MVCF.Comps.CompProperties_VerbGiver">
+                <verbProps>
+                    <li>
+                        <label>Gun</label>
+                        <visualLabel>mini-turret gun</visualLabel>
+                        <description>A simple automatic gun made to be mounted on a shoulder.</description>
+                        <canBeToggled>true</canBeToggled>
+                        <comps>
+                            <li Class="MVCF.VerbComps.VerbCompProperties_Turret">
+                                <compClass>MVCF.VerbComps.VerbComp_Turret</compClass>
+                                <humanAsDefault>true</humanAsDefault>
+                                <graphic>
+                                    <texPath>Things/Pawn/Animal/Apparel/MiniTurretPack_Gun</texPath>
+                                    <graphicClass>Graphic_Single</graphicClass>
+                                </graphic>
+                                <defaultPosition>
+                                    <Default>(0,0)</Default>
+                                    <Up>(0.3,-0.2)</Up>
+                                    <Down>(0.3,0.2)</Down>
+                                    <Right>(0.0,0.4)</Right>
+                                    <Left>(0.0,0.4)</Left>
+                                </defaultPosition>
+                                <drawScale>2</drawScale>
+                            </li>
+                        </comps>
+                    </li>
+                </verbProps>
+            </li>
+        </comps>
+
+        <mergeVerbGizmos>false</mergeVerbGizmos>
+        <graphicData>
+            <texPath>Things/Pawn/Animal/Apparel/Body/BC</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <equippedStatOffsets>
+            <MoveSpeed>0.1</MoveSpeed>
+        </equippedStatOffsets>
+        <statBases>
+            <WorkToMake>8000</WorkToMake>
+            <MaxHitPoints>800</MaxHitPoints>
+            <Mass>4</Mass>
+            <Flammability>0.1</Flammability>
+            <ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.35</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.35</ArmorRating_Heat>
+            <Insulation_Cold>30</Insulation_Cold>
+            <Insulation_Heat>30</Insulation_Heat>
+            <EquipDelay>2</EquipDelay>
+            <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.15</StuffEffectMultiplierInsulation_Heat>
+        </statBases>
+        <costList>
+            <ComponentSpacer>4</ComponentSpacer>
+            <Plasteel>200</Plasteel>
+            <Uranium>30</Uranium>
+        </costList>
+        <apparel>
+            <bodyPartGroups>
+                <li>AnimalHead</li>
+                <li>AnimalBody</li>
+                <li>AnimalLegs</li>
+            </bodyPartGroups>
+            <wornGraphicPath>Things/Pawn/Animal/Apparel/Body/BC</wornGraphicPath>
+            <layers>
+                <li>Middle</li>
+            </layers>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+            <useDeflectMetalEffect>true</useDeflectMetalEffect>
+            <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+            <tags>
+                <li>Animal</li>
+                <li>AnimalApparel</li>
+                <li>AnimalCUTOUTCOMPLEX</li>
+                <li>defNameChinchilla</li>
+                <li>DMS_Pilot_Chinchilla</li>
+                <li MayRequire="aoba.deadmanswitch.core">DMS_Pilot</li>
+                <li MayRequire="aoba.deadmanswitch.core">DMS_Tactical</li>
+            </tags>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.98,0.1,0.1)</only>
+                </li>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.1,0.1,0.99)</only>
+                </li>
+                <li>
+                    <weight>6</weight>
+                    <min>(0.3,0.3,0.3)</min>
+                    <max>(0.5,0.5,0.5)</max>
+                </li>
+            </options>
+        </colorGenerator>
+        <modExtensions>
+            <li Class="AnimalGear.AnimalApparelDefExtension">
+                <showCoverageForBodyType>QuadrupedAnimalWithPawsAndTail</showCoverageForBodyType>
+            </li>
+            </modExtensions>
+    </ThingDef>
+
+    <!--    <ThingDef ParentName="ArmorHelmetMakeableBase"> -->
+    <!-- 	<defName>BC_ChinchillaBattleBeret</defName> -->
+    <!-- 	<label>chinchilla battle beret</label> -->
+    <!-- 	<description>Chinchilla beret. Smort.</description> -->
+    <!-- 	<descriptionHyperlinks> -->
+    <!-- 		<ThingDef>Chinchilla</ThingDef> -->
+    <!-- 	</descriptionHyperlinks> -->
+    <!-- 	<statBases> -->
+    <!-- 		<WorkToMake>8000</WorkToMake> -->
+    <!-- 		<MaxHitPoints>240</MaxHitPoints> -->
+    <!-- 		<Mass>0.2</Mass> -->
+    <!--            <ArmorRating_Sharp>0.5</ArmorRating_Sharp> -->
+    <!--            <ArmorRating_Blunt>0.5</ArmorRating_Blunt> -->
+    <!--            <ArmorRating_Heat>0.5</ArmorRating_Heat> -->
+    <!--            <StuffEffectMultiplierArmor>0.7</StuffEffectMultiplierArmor> -->
+    <!--            <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold> -->
+    <!--            <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat> -->
+    <!--            <EquipDelay>2.5</EquipDelay> -->
+    <!-- 	</statBases> -->
+    <!--  		<costStuffCount>25</costStuffCount> -->
+    <!-- 	<costList> -->
+    <!-- 		<ComponentIndustrial>1</ComponentIndustrial> -->
+    <!--  			<Plasteel>5</Plasteel> -->
+    <!-- 	</costList> -->
+    <!-- 	<apparel> -->
+    <!-- 		<tags> -->
+    <!--                <li>Animal</li> -->
+    <!--                <li>AnimalCUTOUTCOMPLEX</li> -->
+    <!--                <li>Chinchilla</li> -->
+    <!-- 		</tags> -->
+    <!--            <canBeDesiredForIdeo>false</canBeDesiredForIdeo> -->
+    <!--            <bodyPartGroups> -->
+    <!--                <li>FullHead</li> -->
+    <!--            </bodyPartGroups> -->
+    <!--            <wornGraphicPath>Things/Pawn/Animal/Apparel/Head/BC</wornGraphicPath> -->
+    <!--            <layers> -->
+    <!--                <li>OnSkin</li> -->
+    <!--            </layers> -->
+    <!--            <defaultOutfitTags> -->
+    <!--                <li>Anything</li> -->
+    <!--                <li>Soldier</li> -->
+    <!--            </defaultOutfitTags> -->
+    <!-- 	</apparel> -->
+    <!--        <techLevel>Industrial</techLevel> -->
+    <!--        <graphicData> -->
+    <!--            <texPath>Things/Pawn/Animal/Apparel/Head/BC</texPath> -->
+    <!--            <graphicClass>Graphic_Single</graphicClass> -->
+    <!--        </graphicData> -->
+    <!--        <thingCategories> -->
+    <!--            <li>Animal_Apparel</li> -->
+    <!--        </thingCategories> -->
+    <!--        <generateAllowChance>0</generateAllowChance> -->
+    <!--        <colorGenerator Class="ColorGenerator_Options"> -->
+    <!--            <options> -->
+    <!--                <li> -->
+    <!--                    <weight>10</weight> -->
+    <!--                    <only>(0.98,0.1,0.1)</only> -->
+    <!--                </li> -->
+    <!--                <li> -->
+    <!--                    <weight>10</weight> -->
+    <!--                    <only>(0.1,0.1,0.99)</only> -->
+    <!--                </li> -->
+    <!--                <li> -->
+    <!--                    <weight>6</weight> -->
+    <!--                    <min>(0.3,0.3,0.3)</min> -->
+    <!--                    <max>(0.5,0.5,0.5)</max> -->
+    <!--                </li> -->
+    <!--            </options> -->
+    <!--        </colorGenerator> -->
+    <!--        <recipeMaker> -->
+    <!--            <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef> -->
+    <!--            <researchPrerequisite>FlakArmor</researchPrerequisite> -->
+    <!--            <skillRequirements> -->
+    <!--                <Crafting>5</Crafting> -->
+    <!--            </skillRequirements> -->
+    <!--        </recipeMaker> -->
+    <!--        <stuffCategories> -->
+    <!--            <li>Fabric</li> -->
+    <!--        </stuffCategories> -->
+    <!-- </ThingDef> -->
+
+    <ThinkTreeDef>
+        <defName>BC_ChinchillaTalking</defName>
+        <insertTag>Animal_PreWander</insertTag>
+        <insertPriority>100</insertPriority>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="BattleChinchilla.ThinkNode_Chinchilla">
+                    <subNodes>
+                        <li Class="ThinkNode_ChancePerHour_Constant">
+                            <mtbHours>5</mtbHours>
+                            <subNodes>
+                                <li Class="ThinkNode_Tagger">
+                                    <tagToGive>Misc</tagToGive>
+                                    <subNodes>
+                                        <li Class="BattleChinchilla.JobGiver_Talk" />
+                                    </subNodes>
+                                </li>
+                            </subNodes>
+                        </li>
+                    </subNodes>
+                </li>
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+
+    <JobDef>
+        <defName>BC_ChinchillaTalking</defName>
+        <driverClass>BattleChinchilla.JobDriver_Talk</driverClass>
+        <reportString>talking with TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
+
+    <InteractionDef>
+        <defName>BC_ChinchillaInteraction</defName>
+        <label>chatting</label>
+        <workerClass>BattleChinchilla.InteractionWorker_AnimalSpeak</workerClass>
+        <symbol>Things/Mote/TeachingIcon</symbol>
+        <recipientThought>Chitchat</recipientThought>
+        <logRulesInitiator>
+            <rulesStrings>
+                <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [warthings].</li>
+                <li>r_logentry->[INITIATOR_nameDef] [talkedabout] [warthings] with [RECIPIENT_nameDef].</li>
+                <li>r_logentry->[INITIATOR_nameDef] [commentedabout] [warthings] to [RECIPIENT_nameDef].</li>
+                <li>r_logentry->[INITIATOR_nameDef] [boastedabout] [warthings] to [RECIPIENT_nameDef].</li>
+                <li>r_logentry->[INITIATOR_nameDef] [confidedin] about [warthings].</li>
+                <li>r_logentry->[INITIATOR_nameDef] [grumbledabout] [warthings] to [RECIPIENT_nameDef].</li>
+
+                <li>talkedabout->chatted about</li>
+                <li>talkedabout->shared a word about</li>
+                <li>talkedabout->spoke about</li>
+                <li>talkedabout->gabbed about</li>
+                <li>talkedabout->talked about</li>
+                <li>talkedabout->mumbled about</li>
+                <li>talkedabout->quipped about</li>
+                <li>talkedabout->whispered about</li>
+                <li>talkedabout->debated</li>
+
+                <li>commentedabout->said something about</li>
+                <li>commentedabout->made a comment about</li>
+                <li>commentedabout->commented about</li>
+                <li>commentedabout->mused about</li>
+                <li>commentedabout->opined about</li>
+                <li>commentedabout->observed about</li>
+
+                <li>boastedabout->bragged about</li>
+                <li>boastedabout->gloated over</li>
+                <li>boastedabout->yarned about</li>
+                <li>boastedabout->crowed about</li>
+
+                <li>confidedin->shared secrets with [RECIPIENT_nameDef] </li>
+                <li>confidedin->trusted [RECIPIENT_nameDef] with thoughts on</li>
+                <li>confidedin->revealed innermost feelings about to [RECIPIENT_nameDef] </li>
+
+                <li>grumbledabout->complained about</li>
+                <li>grumbledabout->whined about</li>
+                <li>grumbledabout->muttered about</li>
+
+                <li>warthings->loving when a plan comes together</li>
+                <li>warthings->visceral reaction to blood splatter in battle</li>
+                <li>warthings->the importance of maintaining good formation</li>
+                <li>warthings->the importance of weapon maintenance</li>
+                <li>warthings->their favourite ration</li>
+                <li>warthings->the art of tactical retreats (running away)</li>
+                <li>warthings->proper grenade throwing technique</li>
+                <li>warthings->their favorite war crimes</li>
+                <li>warthings->the importance of a good battle cry</li>
+                <li>warthings->how to polish armor to maximum shininess</li>
+                <li>warthings->the best places to hide explosives</li>
+                <li>warthings->why swords are cooler than guns</li>
+                <li>warthings->epic tales of running up hills in heavy armor</li>
+                <li>warthings->the proper way to trash talk enemies</li>
+                <li>warthings->their collection of enemy teeth</li>
+                <li>warthings->that one time they single-handedly defeated an army</li>
+                <li>warthings->the best way to intimidate larger opponents</li>
+                <li>warthings->their secret combat techniques</li>
+                <li>warthings->why small warriors are the most fearsome</li>
+                <li>warthings->that one time they shot a man's arms off with a single bullet</li>
+                <li>warthings->the superior aerodynamics of a well-thrown rock</li>
+                <li>warthings->the moral implications of using a tiny, adorable creature in battle</li>
+                <li>warthings->how to properly groom their fur after a particularly muddy skirmish</li>
+                <li>warthings->the strategic advantages of napping mid-battle</li>
+                <li>warthings->the best methods for sneaking extra treats from the supply tent</li>
+                <li>warthings->their surprisingly effective 'cute distraction' maneuver</li>
+                <li>warthings->the existential dread of being a chinchilla in a war-torn world</li>
+                <li>warthings->the perfect blend of squeaks and growls for a terrifying battle cry</li>
+                <li>warthings->their ongoing quest for the fluffiest dust bath in the barracks</li>
+                <li>warthings->the surprising comfort of a well-placed helmet as a bed</li>
+                <li>warthings->the best way to avoid having their belly tickled during a tense moment</li>
+                <li>warthings->the optimal conditions for maximum cuteness on the battlefield</li>
+                <li>warthings->the proper etiquette for sharing forage findings with comrades</li>
+                <li>warthings->their dream of a world made entirely of chew toys</li>
+                <li>warthings->the best way to use their tiny size to their advantage in tight spaces</li>
+                <li>warthings->how to convince larger allies to carry them during long marches</li>
+                <li>warthings->the true meaning of bravery, even when faced with a slightly damp biscuit</li>
+                <li>warthings->the art of looking utterly innocent after committing a minor act of sabotage</li>
+                <li>warthings->the secret to always finding the sunny spot for a quick sunbath</li>
+                <li>warthings->the peculiar joy of gnawing through enemy supply lines</li>
+            </rulesStrings>
+        </logRulesInitiator>
+    </InteractionDef>
+</Defs>

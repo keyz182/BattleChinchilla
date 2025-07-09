@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/race/trainability</xpath>
+        <value>
+            <trainability>Advanced</trainability>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/race/petness</xpath>
+        <value>
+            <petness>0.8</petness>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/tools/li[1]/power</xpath>
+        <value>
+            <power>8</power>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/tools/li[2]/power</xpath>
+        <value>
+            <power>8</power>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/tools/li[3]/power</xpath>
+        <value>
+            <power>12</power>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/tools/li[4]/power</xpath>
+        <value>
+            <power>4</power>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Chinchilla"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/comps</xpath>
+        <value>
+            <li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
+                <makeNonFleeingToo>true</makeNonFleeingToo>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/comps</xpath>
+        <value>
+            <li Class="VEF.AnimalBehaviours.CompProperties_LastStand">
+                <finalCoolDownMultiplier>6</finalCoolDownMultiplier>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Chinchilla"]/comps</xpath>
+        <value>
+            <li Class="VEF.AnimalBehaviours.CompProperties_StateAfterHealthLoss">
+                <healthPercent>40</healthPercent>
+                <tickInterval>50</tickInterval>
+                <mentalState>PanicFlee</mentalState>
+            </li>
+        </value>
+    </Operation>
+</Patch>
